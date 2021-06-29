@@ -1,5 +1,5 @@
 //année bissextile
-const annee = parseInt(prompt('Veuillez saisir une année !'));
+/*const annee = parseInt(prompt('Veuillez saisir une année !'));
 const resultatCotation = document.getElementById('resultat_cotation');
 if(isNaN(annee)){
     alert("veuillez entrer un nombre!")
@@ -43,3 +43,22 @@ switch (cotation) {
             resultatSwitch.innerHTML = 'Valeur en dehors du scope !'; 
         break;
 }
+*/
+//date 
+const dateEncodee = prompt('encoder une date au format "DD-MM-YYYY"');
+regexDate = /^\d{2}-\d{2}-\d{4}$/;
+if (!regexDate.test(dateEncodee)) {
+    dateEncodee = prompt('format non valide. encoder une date au format "DD-MM-YYYY"');
+}
+const date = new Date(dateEncodee);
+
+const day = dateEncodee.slice(0,2);
+const month = dateEncodee.slice(4,5);
+const year = dateEncodee.slice(6,10);
+const formatDate = new Date(year, month -1 , day);
+console.log(formatDate);
+
+const dateFormatFr = formatDate.toLocaleDateString('fr-BE');
+console.log(dateFormatFr);
+const jourDeSemaine = formatDate.getDay();
+console.log(jourDeSemaine);
