@@ -1,16 +1,16 @@
 //année bissextile
-/*const annee = parseInt(prompt('Veuillez saisir une année !'));
-
+const annee = parseInt(prompt('Veuillez saisir une année !'));
+const resultatCotation = document.getElementById('resultat_cotation');
 if(isNaN(annee)){
     alert("veuillez entrer un nombre!")
 }
 else if((annee % 4 === 0 && annee % 100 > 0) || (annee % 400 === 0)) {
-	alert(annee + " est bissextile");
-    console.log(`${annee} est bissextile !`);
+	
+    resultatCotation.innerHTML = `${annee} est  bissextile !`;
 } else {
-	alert(`${annee} n'est pas bissextile !`);
+	resultatCotation.innerHTML=`${annee} n'est pas bissextile !`;
 }
-*/
+
 //cotation
 const cotation = parseInt(prompt('Veuillez saisir une cotation !'));
 const resultatSwitch = document.getElementById('resultat_switch');
